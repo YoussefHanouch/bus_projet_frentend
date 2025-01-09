@@ -1,0 +1,40 @@
+.crt:hover{
+    scale: 110%;
+    transition: 0.5s;
+} 
+.crt img{
+    width:250px;
+}
+
+
+.dd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:15%;
+}
+
+
+.map-container {
+    /* height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 50.25%; /* Aspect ratio: 16:9 */
+    width: 100%; /* Adjust the width as needed */
+}
+
+/* Style for iframe */
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    border: 0;
+    margin-left:5% ; 
+    
+}
