@@ -8,7 +8,7 @@ const CardLign = () => {
   const cardsPerPage = 3;
   const [busData, setBusData] = useState([]);
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/trajets')
+    fetch('https://busbackend.infinityfree.me/api/trajets')
       .then(response => response.json())
       .then(data => {
         setTrajets(data);
@@ -19,7 +19,7 @@ const CardLign = () => {
 
 
 useEffect(() => {
-  fetch('http://127.0.0.1:8000/api/bus-arrete') // Remplacez l'URL par celle de votre API
+  fetch('https://busbackend.infinityfree.me/api/bus-arrete') // Remplacez l'URL par celle de votre API
     .then(response => response.json())
     .then(data => {
       setBusData(data);

@@ -24,7 +24,7 @@ useEffect(() => {
 
   return (
     <div>
-            <a href='http://127.0.0.1:8000/dash'>skjhgf</a>
+            {/* <a href='http://127.0.0.1:8000/dash'>skjhgf</a> */}
 
        <nav
       className={`fixed w-full left-0 top-0 z-[999] ${

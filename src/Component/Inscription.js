@@ -16,7 +16,7 @@ const Inscription = () => {
         e.preventDefault();
         try {
             // Envoi de la requête POST à l'API Laravel
-            const response = await axios.post('http://127.0.0.1:8000/api/test', {
+            const response = await axios.post('https://busbackend.infinityfree.me/api/test', {
                 name: nom,
                 prenom: prenom,
                 email: email,
@@ -24,7 +24,7 @@ const Inscription = () => {
                 password: password,
             });
             console.log(response.data); // Affichage de la réponse de l'API
-            window.location.href = 'http://127.0.0.1:8000/login'; // Redirect to login page
+            window.location.href = 'https://busbackend.infinityfree.me/login'; // Redirect to login page
 
 
             // Ajoutez ici la logique pour gérer la réponse de l'API, par exemple rediriger l'utilisateur vers une autre page
@@ -94,7 +94,7 @@ const Inscription = () => {
                     </form>
 
                     <p style={{ textAlign: 'center', marginTop: '20px' }}>
-                        Déjà un compte ? <a className="signup-link" href="http://127.0.0.1:8000/login">Connectez-vous</a>
+                        Déjà un compte ? <a className="signup-link" href="https://busbackend.infinityfree.me/login">Connectez-vous</a>
                     </p>
                 </div>
             </div>
