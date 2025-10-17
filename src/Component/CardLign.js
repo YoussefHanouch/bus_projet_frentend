@@ -7,25 +7,41 @@ const CardLign = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 3;
   const [busData, setBusData] = useState([]);
-  useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/trajets')
-      .then(response => response.json())
-      .then(data => {
-        setTrajets(data);
-        // console.log(data);
-      })
-      .catch(error => console.error('Erreur lors de la récupération des trajets :', error));
-  }, []);
-
 
 useEffect(() => {
-  fetch('http://127.0.0.1:8000/api/bus-arrete') // Remplacez l'URL par celle de votre API
-    .then(response => response.json())
-    .then(data => {
-      setBusData(data);
-    })
-    .catch(error => console.error('Erreur lors de la récupération des données des bus:', error));
+  const fetchTrajets = async () => {
+    try {
+      const response = await fetch('https://busbackend.infinityfree.me/api/trajets');
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      setTrajets(data);
+    } catch (error) {
+      console.error('Erreur lors de la récupération des trajets :', error);
+    }
+  };
+
+  fetchTrajets();
 }, []);
+
+useEffect(() => {
+  const fetchBusData = async () => {
+    try {
+      const response = await fetch('https://busbackend.infinityfree.me/api/bus-arrete');
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      setBusData(data);
+    } catch (error) {
+      console.error('Erreur lors de la récupération des données des bus:', error);
+    }
+  };
+
+  fetchBusData();
+}, []);
+
 
 
 
