@@ -10,7 +10,7 @@ const menulinks = [
   { name: "SERVICE", link: '/service' },
   { name: "CART", link: '/cart' },
   { name: "TARIF PAR LIGNE", link: '/tarif' },
-  { name: "SE CONNECTER", link: 'http://127.0.0.1:8000/login' },
+  { name: "SE CONNECTER", link: 'https://busbackend.infinityfree.me/login' },
   { name: "S'INSCRIRE", link: '/inscription' },
   // { name: "ADMINISTRATION", link: '/administration' },
 ];
@@ -86,3 +86,4 @@ useEffect(() => {
 }
 
 export default Navbar
+
