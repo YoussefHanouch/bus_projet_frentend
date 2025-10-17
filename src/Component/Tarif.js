@@ -5,7 +5,7 @@ const TarifTable = (props) => {
   const [tarifs, setTarifs] = useState([]);
 
   useEffect(() => {
-    fetch('https://busbackend.infinityfree.me/api/buses') // Assurez-vous que l'URL correspond à votre endpoint API
+    fetch('http://127.0.0.1:8000/api/buses') // Assurez-vous que l'URL correspond à votre endpoint API
       .then(response => response.json())
       .then(data => setTarifs(data))
       .catch(error => console.error('Erreur lors de la récupération des données:', error));
